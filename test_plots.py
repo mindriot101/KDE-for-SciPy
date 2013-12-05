@@ -7,7 +7,7 @@ import inspect
 import numpy as np
 import matplotlib.pyplot as plt
 import kde
-import dgp_class as dgp
+from dgp import dgp_class as dgp
 
 def main(Nsamp=None, Nmesh=None):
     """
