@@ -6,7 +6,7 @@ import sys
 import inspect
 import numpy as np
 import matplotlib.pyplot as plt
-import kde
+import scikde
 from dgp import dgp_class as dgp
 
 def main(Nsamp=None, Nmesh=None):
@@ -29,7 +29,7 @@ def main(Nsamp=None, Nmesh=None):
         print 'Generating graph for', name
         model = cls()
         x = model.sample(size=Nsamp)
-        t, mesh, kdense = kde.kde(x, N=Nmesh)
+        t, mesh, kdense = scikde.kde(x, N=Nmesh)
         f = model.pdf(mesh)
         
         fig = plt.figure()
